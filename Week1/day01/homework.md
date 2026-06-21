@@ -178,7 +178,7 @@ from dotenv import load_dotenv
 from schemas.models import Message
 from services.llm_service import call_llm
 
-load_dotenv()  # 可选，加载 .env 文件
+load_dotenv()  # 可选，加载 .env_example 文件
 
 if __name__ == "__main__":
     messages = [

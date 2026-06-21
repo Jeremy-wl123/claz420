@@ -5,7 +5,7 @@ import requests
 from openai import OpenAI
 from dotenv import load_dotenv
 
-load_dotenv()  # 加载 .env 中的环境变量
+load_dotenv()  # 加载 .env_example 中的环境变量
 
 # ---------- 配置 ----------
 MODEL_NAME = os.getenv("DEEPSEEK_MODEL", "deepseek-chat")  # 可用 deepseek-chat
