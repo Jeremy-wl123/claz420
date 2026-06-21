@@ -1,0 +1,19 @@
+homework/
+├── app.py                          # 🚀 应用入口（FastAPI 创建、CORS、lifespan、启动）
+├── model/                          # 🗄️ M 层 — 数据与模型
+│   ├── __init__.py
+│   ├── config.py                   #     配置常量（DB参数、安全白名单）
+│   ├── database.py                 #     SQLAlchemy 表定义 + DB 操作（引擎/建库/Schema/执行查询）
+│   └── schemas.py                  #     Pydantic 请求/响应模型
+├── controller/                     # 🎮 C 层 — 路由控制器
+│   ├── __init__.py
+│   ├── query_controller.py         #     /query 端点：编排整个查询流程
+│   └── health_controller.py        #     /health 健康检查端点
+├── service/                        # ⚙️ 业务逻辑层（Model 与 Controller 之间的桥梁）
+│   ├── __init__.py
+│   ├── ai_service.py               #     DeepSeek AI 客户端 + NL→SQL 生成
+│   └── validator.py                #     SQL 安全性校验
+└── utils/                          # 🔧 工具层
+    ├── __init__.py
+    ├── logger.py                   #     日志系统配置
+    └── helpers.py                  #     通用工具（IP获取、JSON解析）

@@ -1,0 +1,35 @@
+{
+  "id": "chatcmpl-460bf5d6-6377-94f1-a9b3-b58619ef52e7",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "API Key 是一种用于身份验证和访问控制的唯一密钥，服务提供方通过它识别调用者身份、授权其访问特定 API 功能，并通常用于配额管理、计费与安全审计。",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1781435767,
+  "model": "qwen-plus",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 46,
+    "prompt_tokens": 30,
+    "total_tokens": 76,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "chatcmpl-f684e67b-1216-94e5-88ec-7c9bf06820c3",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "大模型 API（Application Programming Interface）是云服务商或模型提供方开放的接口，允许开发者通过网络请求（如 HTTP）调用大型语言模型（如 GPT、Qwen、GLM 等）的推理能力，而无需自行部署和维护模型。  \n它通常封装了输入文本（prompt）、参数配置（如 temperature、max_tokens）和输出解析等逻辑，以标准化格式（如 JSON）返回模型生成的响应。  \n本质上，它是连接应用与大模型的“桥梁”，让开发者能快速集成智能能力（如对话、摘要、翻译），专注业务逻辑而非底层算力与模型优化。",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1781515655,
+  "model": "qwen-plus",
+  "object": "chat.completion",
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 136,
+    "prompt_tokens": 34,
+    "total_tokens": 170,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    }
+  }
+}

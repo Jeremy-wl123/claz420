@@ -1,0 +1,19 @@
+HTTP Request
+    │
+    ▼
+app.py（路由注册 + 中间件）
+    │
+    ▼
+controller/query_controller.py（handle_query）
+    │
+    ├── model/database.py::get_schema()        ── 获取表结构
+    ├── service/ai_service.py::create_client()  ── 创建 AI 客户端
+    ├── service/ai_service.py::generate_sql()   ── NL → SQL
+    ├── service/validator.py::validate_sql()    ── SQL 安全校验
+    └── model/database.py::execute_read_only_query() ── 执行查询
+            │
+            ▼
+    model/schemas.py::QueryResponse ── 格式化响应
+            │
+            ▼
+    HTTP Response (JSON)

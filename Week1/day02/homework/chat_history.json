@@ -1,0 +1,38 @@
+[
+  {
+    "role": "system",
+    "content": "You are a helpful assistant."
+  },
+  {
+    "role": "user",
+    "content": "10个字夸我"
+  },
+  {
+    "role": "assistant",
+    "content": "你一笑整个世界都亮了"
+  },
+  {
+    "role": "user",
+    "content": "我上一个问题是什么？"
+  },
+  {
+    "role": "assistant",
+    "content": "你上一个问题是让我用10个字夸你，我回答说：“你一笑整个世界都亮了。”"
+  },
+  {
+    "role": "user",
+    "content": "/exit"
+  },
+  {
+    "role": "assistant",
+    "content": "好的，再见。"
+  },
+  {
+    "role": "user",
+    "content": "我上一个问题是什么？"
+  },
+  {
+    "role": "assistant",
+    "content": "你上一个问题是“/exit”，我当时的回复是“好的，再见。”"
+  }
+]

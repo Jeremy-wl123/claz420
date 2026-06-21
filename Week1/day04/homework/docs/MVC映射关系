@@ -1,0 +1,16 @@
+原文件 10nl2sql_fastapi.py (434行)
+│
+├─ 第21-53行  setup_logging()        ──→  utils/logger.py
+├─ 第55-67行  DB配置常量              ──→  model/config.py
+├─ 第69-80行  get_local_ip()         ──→  utils/helpers.py
+├─ 第82-115行 FastAPI创建/lifespan/CORS ──→  app.py
+├─ 第117-130行 Pydantic模型           ──→  model/schemas.py
+├─ 第132-230行 DB引擎/建库/Schema     ──→  model/database.py
+├─ 第232-306行 AI客户端/SQL生成       ──→  service/ai_service.py
+│             parse_json_content()   ──→  utils/helpers.py
+├─ 第308-337行 validate_sql()        ──→  service/validator.py
+├─ 第339-357行 execute_read_only_query() ──→  model/database.py
+├─ 第359-369行 startup_event(重复)   ──→  ⚠️ 已合并到 app.py 的 lifespan
+├─ 第372-428行 API端点               ──→  controller/query_controller.py
+│                                     ──→  controller/health_controller.py
+└─ 第431-434行 if __name__           ──→  app.py

@@ -1,0 +1,16 @@
+# FastAPI 核心框架（保留你指定的版本）
+fastapi~=0.124.2
+# ASGI 服务器（带standard扩展，适配最新版）
+uvicorn[standard]~=0.38.0
+# Tortoise-ORM（0.25.1 适配Pydantic v2，删除重复的tortoise依赖）
+tortoise-orm~=0.25.1
+# 表单/文件上传处理
+python-multipart~=0.0.20
+# Starlette（匹配FastAPI 0.124.x的要求：≥0.40.0 <0.51.0）
+starlette~=0.40.0
+# MySQL异步驱动
+aiomysql~=0.3.2
+# Pydantic v2（兼容Tortoise-ORM 0.25.1）
+pydantic~=2.12.5
+# 加密包（指定稳定版本）
+cryptography>=42.0.0

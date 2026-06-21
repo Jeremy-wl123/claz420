@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  # MySQL 数据库服务
+  mysql:
+    image: mysql:8.0
+    container_name: nl2sql-mysql_test
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-123456}
+      MYSQL_DATABASE: ${DB_NAME:-teaching}
+    ports:
+      - "3310:3306"          # 可选，便于本地调试
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # FastAPI 应用服务
+  app:
+    build: .
+    container_name: nl2sql-app
+    environment:
+      DB_HOST: mysql                 # 使用服务名连接数据库
+      DB_PORT: 3306
+      DB_USER: root
+      DB_PASSWORD: ${MYSQL_ROOT_PASSWORD:-123456}
+      DB_NAME: ${DB_NAME:-teaching}
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY}          # 必须设置
+      DEEPSEEK_BASE_URL: ${DEEPSEEK_BASE_URL:-https://api.deepseek.com}
+      DEEPSEEK_MODEL: ${DEEPSEEK_MODEL:-deepseek-chat}
+    ports:
+      - "8080:8000"
+    depends_on:
+      mysql:
+        condition: service_healthy   # 等待 MySQL 健康后再启动
+    volumes:
+      - ./app.log:/app/app.log      # 挂载日志文件以便持久化查看
+    restart: unless-stopped
+
+volumes:
+  mysql_data:
