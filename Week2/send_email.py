@@ -7,7 +7,7 @@ from email.mime.text import MIMEText
 mail_host = "smtp.qq.com"
 mail_port = 465
 mail_user = "wolin105@qq.com"
-mail_pass = "pingnllumhbzbceg"   # 注意：不是登录密码
+mail_pass =   # 注意：不是登录密码
 sender = mail_user
 
 def send_email(res='test', receivers='1053851332@qq.com'):
